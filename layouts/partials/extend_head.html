@@ -1,4 +1,38 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+
+ <!-- MathJax version 3: https://www.mathjax.org/ -->
+
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+ 
+ <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true,
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      },
+    };
+
+    window.onload = function () {
+      MathJax.typesetPromise().then(() => {
+        console.log("MathJax rendering complete.");
+      });
+    };
+
+ </script>
+
+
+<script src="//yihui.org/js/math-code.js" defer></script>
+
+
+
+
 {{- /* Head custom content area end */ -}}
