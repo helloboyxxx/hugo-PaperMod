@@ -17,7 +17,11 @@ code {
 :root {
   --theme: #fdf8ed;   /* this color is for content background */
   --code-bg: #fdf8ed; /* papermod uses this color for front page background */ 
-  --entry: #fff3c6;
+  --entry: #fff5cf;
+  --content: rgb(31, 31, 31);
+  --code-block-bg: #fff5cf;
+  --border: #ffe064;
+  --code-font-color: #3c3c3c;
 }
 
 .dark {
@@ -30,6 +34,8 @@ code {
   --hljs-bg: rgb(46, 46, 51);
   --code-bg: #1f1f1f;
   --border: rgb(51, 51, 51);
+  --code-font-color: rgb(152, 204, 207);
+  --code-block-bg: rgb(30, 59, 67);
 }
 
 .entry-content {
@@ -53,4 +59,18 @@ code {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+
+.post-content pre code {
+  display: grid;
+  margin: auto 0;
+  padding: 10px;
+  color: var(--code-font-color);
+  font-family: "Source Code Pro", monospace;
+  background: var(--code-block-bg) !important;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  word-break: break-all;
+  tab-size: 2;
 }
