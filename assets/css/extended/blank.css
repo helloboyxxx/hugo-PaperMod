@@ -74,3 +74,11 @@ code {
   word-break: break-all;
   tab-size: 2;
 }
+
+.post-entry:hover {
+  transform: scale(1.01); /* Optional: Add a slight lift effect */
+}
+
+.post-entry:active {
+  transform: scale(0.99);
+}
